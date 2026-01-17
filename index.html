@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TurfSync</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>TurfSync</h1>
+    <p>Smart booking for free local turfs</p>
+  </header>
+
+  <!-- Search Bar -->
+  <section id="search-bar">
+    <input type="text" id="turf-search" placeholder="Search turf..." oninput="filterTurfs()">
+  </section>
+
+  <!-- Turf List -->
+  <section id="turf-list">
+    <h2>Select a Turf</h2>
+    <div class="turf-cards" id="turf-cards"></div>
+  </section>
+
+  <!-- Slot View -->
+  <section id="slots" class="hidden">
+    <h2 id="turf-name"></h2>
+
+    <div class="slots-container"></div>
+
+    <p class="ai"></p>
+
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </section>
+
+  <!-- Booking History -->
+  <section id="history" class="hidden">
+    <h2>My Bookings</h2>
+    <ul id="booking-list"></ul>
+    <button class="back" onclick="closeHistory()">⬅ Back</button>
+  </section>
+
+  <button id="history-btn" onclick="openHistory()">📋 My Bookings</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
